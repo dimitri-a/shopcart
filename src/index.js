@@ -11,11 +11,11 @@ import Counter from './Counter'
 
 const store = createStore(
     reducer,
-    applyMiddleware()
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 ReactDOM.render(<Provider store={store}>
-    <Counter />
+    <App />
 </Provider>, document.getElementById('root'));
 
 registerServiceWorker();

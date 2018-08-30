@@ -8,6 +8,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux';
 import Counter from './Counter'
 
+import ProductList from './containers/ProductListContainer';
+import Cart from './components/Cart';
 
 const store = createStore(
     reducer,
@@ -15,7 +17,9 @@ const store = createStore(
 )
 
 ReactDOM.render(<Provider store={store}>
-    <App />
+    <div>
+     <App></App>
+    </div>
 </Provider>, document.getElementById('root'));
 
 registerServiceWorker();

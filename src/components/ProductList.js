@@ -1,15 +1,13 @@
 import React from 'react'
-
+import ProductItem from '../components/ProductItem'
 export const ProductList = (props) => {
 
   const { products } = props;
 
-  debugger
-
   return (
     <ul>
       {products.map((p) => {
-        return <li>{p.name}</li>
+       <ProductItem item={p}></ProductItem>
       })}
     </ul>
   )

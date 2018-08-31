@@ -8,9 +8,11 @@ export class ProductItem extends Component {
   }
 
   render() {
+
+    const {item,actions} =this.props;
     return (
       <div>
-        
+        {item.name} {item.price} <button onClick={actions.addToCart(item.id)}>add to cart</button>
       </div>
     )
   }

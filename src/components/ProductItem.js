@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const ProductItem =(props) => {
+export const ProductItem = (props) => {
 
-  const {item} = props;
+  const { item, addToCart } = props;
   return (
     <div>
-     {item.name} {item.id} <button>add to cart</button>
+      {item.name} {item.id} <button onClick={()=>addToCart(item.id)}>add to cart</button>
     </div>
   )
 }

@@ -3,13 +3,13 @@ import {ProductItem} from './ProductItem'
 
 export const ProductList = (props) => {
 
-  const { products } = props;
+  const { products ,actions} = props;
 
   return (
     <ul>
       
       {products.map( p => {
-        return <ProductItem item={p}></ProductItem>
+        return <ProductItem item={p} addToCart={actions.addToCart}></ProductItem>
       })
       }
     </ul>
